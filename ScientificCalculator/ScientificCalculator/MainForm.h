@@ -63,6 +63,14 @@ namespace ScientificCalculator {
 	private: System::Windows::Forms::Button^  button22;
 	private: System::Windows::Forms::Button^  button23;
 	private: System::Windows::Forms::Button^  button24;
+	private: System::Windows::Forms::Button^  button25;
+	private: System::Windows::Forms::Button^  button26;
+	private: System::Windows::Forms::Button^  button27;
+	private: System::Windows::Forms::Button^  button28;
+	private: System::Windows::Forms::Button^  button29;
+	private: System::Windows::Forms::Button^  button30;
+	private: System::Windows::Forms::Button^  button31;
+	private: System::Windows::Forms::Button^  button32;
 	protected:
 
 	private:
@@ -108,6 +116,14 @@ namespace ScientificCalculator {
 			this->button22 = (gcnew System::Windows::Forms::Button());
 			this->button23 = (gcnew System::Windows::Forms::Button());
 			this->button24 = (gcnew System::Windows::Forms::Button());
+			this->button25 = (gcnew System::Windows::Forms::Button());
+			this->button26 = (gcnew System::Windows::Forms::Button());
+			this->button27 = (gcnew System::Windows::Forms::Button());
+			this->button28 = (gcnew System::Windows::Forms::Button());
+			this->button29 = (gcnew System::Windows::Forms::Button());
+			this->button30 = (gcnew System::Windows::Forms::Button());
+			this->button31 = (gcnew System::Windows::Forms::Button());
+			this->button32 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -408,7 +424,7 @@ namespace ScientificCalculator {
 			this->button22->Name = L"button22";
 			this->button22->Size = System::Drawing::Size(75, 23);
 			this->button22->TabIndex = 28;
-			this->button22->Text = L"^";
+			this->button22->Text = L"^2";
 			this->button22->UseVisualStyleBackColor = true;
 			// 
 			// button23
@@ -433,6 +449,94 @@ namespace ScientificCalculator {
 			this->button24->Text = L"%";
 			this->button24->UseVisualStyleBackColor = true;
 			// 
+			// button25
+			// 
+			this->button25->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button25->Location = System::Drawing::Point(374, 318);
+			this->button25->Name = L"button25";
+			this->button25->Size = System::Drawing::Size(75, 23);
+			this->button25->TabIndex = 33;
+			this->button25->Text = L"^";
+			this->button25->UseVisualStyleBackColor = true;
+			// 
+			// button26
+			// 
+			this->button26->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button26->Location = System::Drawing::Point(293, 318);
+			this->button26->Name = L"button26";
+			this->button26->Size = System::Drawing::Size(75, 23);
+			this->button26->TabIndex = 32;
+			this->button26->Text = L"tan";
+			this->button26->UseVisualStyleBackColor = true;
+			// 
+			// button27
+			// 
+			this->button27->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button27->Location = System::Drawing::Point(131, 318);
+			this->button27->Name = L"button27";
+			this->button27->Size = System::Drawing::Size(75, 23);
+			this->button27->TabIndex = 31;
+			this->button27->Text = L"sin";
+			this->button27->UseVisualStyleBackColor = true;
+			// 
+			// button28
+			// 
+			this->button28->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button28->Location = System::Drawing::Point(212, 318);
+			this->button28->Name = L"button28";
+			this->button28->Size = System::Drawing::Size(75, 23);
+			this->button28->TabIndex = 30;
+			this->button28->Text = L"cos";
+			this->button28->UseVisualStyleBackColor = true;
+			// 
+			// button29
+			// 
+			this->button29->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button29->Location = System::Drawing::Point(374, 348);
+			this->button29->Name = L"button29";
+			this->button29->Size = System::Drawing::Size(75, 23);
+			this->button29->TabIndex = 37;
+			this->button29->Text = L"e^x";
+			this->button29->UseVisualStyleBackColor = true;
+			// 
+			// button30
+			// 
+			this->button30->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button30->Location = System::Drawing::Point(293, 348);
+			this->button30->Name = L"button30";
+			this->button30->Size = System::Drawing::Size(75, 23);
+			this->button30->TabIndex = 36;
+			this->button30->Text = L"|x|";
+			this->button30->UseVisualStyleBackColor = true;
+			// 
+			// button31
+			// 
+			this->button31->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button31->Location = System::Drawing::Point(131, 348);
+			this->button31->Name = L"button31";
+			this->button31->Size = System::Drawing::Size(75, 23);
+			this->button31->TabIndex = 35;
+			this->button31->Text = L"?";
+			this->button31->UseVisualStyleBackColor = true;
+			// 
+			// button32
+			// 
+			this->button32->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button32->Location = System::Drawing::Point(212, 348);
+			this->button32->Name = L"button32";
+			this->button32->Size = System::Drawing::Size(75, 23);
+			this->button32->TabIndex = 34;
+			this->button32->Text = L"dy/dx";
+			this->button32->UseVisualStyleBackColor = true;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -440,6 +544,14 @@ namespace ScientificCalculator {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(695, 476);
+			this->Controls->Add(this->button29);
+			this->Controls->Add(this->button30);
+			this->Controls->Add(this->button31);
+			this->Controls->Add(this->button32);
+			this->Controls->Add(this->button25);
+			this->Controls->Add(this->button26);
+			this->Controls->Add(this->button27);
+			this->Controls->Add(this->button28);
 			this->Controls->Add(this->button21);
 			this->Controls->Add(this->button22);
 			this->Controls->Add(this->button23);
