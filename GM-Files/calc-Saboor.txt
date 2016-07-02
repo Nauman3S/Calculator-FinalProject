@@ -1,0 +1,4 @@
+istream& matrix::operator >>(istream& din,matrix& m)
+{
+
+}
