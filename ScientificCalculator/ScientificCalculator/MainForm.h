@@ -71,6 +71,7 @@ namespace ScientificCalculator {
 	private: System::Windows::Forms::Button^  button30;
 	private: System::Windows::Forms::Button^  button31;
 	private: System::Windows::Forms::Button^  button32;
+	private: System::Windows::Forms::Label^  label2;
 	protected:
 
 	private:
@@ -124,6 +125,7 @@ namespace ScientificCalculator {
 			this->button30 = (gcnew System::Windows::Forms::Button());
 			this->button31 = (gcnew System::Windows::Forms::Button());
 			this->button32 = (gcnew System::Windows::Forms::Button());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -164,11 +166,14 @@ namespace ScientificCalculator {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(12, 91);
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(1, 302);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(35, 13);
+			this->label1->Size = System::Drawing::Size(186, 15);
 			this->label1->TabIndex = 4;
-			this->label1->Text = L"label1";
+			this->label1->Text = L"Trignometric Functions _____";
 			// 
 			// textBox1
 			// 
@@ -537,6 +542,18 @@ namespace ScientificCalculator {
 			this->button32->Text = L"dy/dx";
 			this->button32->UseVisualStyleBackColor = true;
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(1, 374);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(166, 15);
+			this->label2->TabIndex = 38;
+			this->label2->Text = L"Statistical Functions _____";
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -544,6 +561,7 @@ namespace ScientificCalculator {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(695, 476);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button29);
 			this->Controls->Add(this->button30);
 			this->Controls->Add(this->button31);
