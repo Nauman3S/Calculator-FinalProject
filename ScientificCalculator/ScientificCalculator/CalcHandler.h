@@ -17,12 +17,33 @@ System::String^ processStat(System::String^ expression) {
 	using namespace System;
 	String  ^expr;
 	expr = expression;
-	
+	int type=0;
 	Console::WriteLine("adasd");
 	if (expr->Contains("Mean(")) {
 		expr = expr->Remove(0, 5);
-
-		//return expr;
+		type = 1;
+	}
+	else if (expr->Contains("Mode("))
+	{
+		expr = expr->Remove(0, 5);
+		type = 2;
+	}
+	else if (expr->Contains("Median("))
+	{
+		expr = expr->Remove(0, 7);
+		type = 3;
+	}
+	else if (expr->Contains("Variance("))
+	{
+		expr = expr->Remove(0, 9);
+		type = 4;
+	}
+	else if (expr->Contains("StdDev("))
+	{
+		expr = expr->Remove(0, 7);
+		type = 5;
+	}
+	//return expr;
 		String^ delimStr = ",";
 		Console::WriteLine("delimiter : '{0}'", delimStr);
 		array<Char>^ delimiter = delimStr->ToCharArray();
@@ -34,11 +55,29 @@ System::String^ processStat(System::String^ expression) {
 			vals[i] = Convert::ToDouble(words[i]);
 
 		}
-		Mean m(vals);
-	
-		return Convert::ToString(m.Calculate());
-		
-	}
+		if (type == 1) {
+
+
+			Mean m(vals);
+
+			return Convert::ToString(m.Calculate());
+		}
+		else if (type == 2) {
+			Mode mm(vals);
+			return Convert::ToString(mm.Calculate());
+		}
+		else if (type == 3) {
+			Median med(vals);
+			return Convert::ToString(med.Calculate());
+		}
+		else if (type == 4) {
+			Variance v(vals);
+			return Convert::ToString(v.Calculate());
+		}
+		else if (type == 5) {
+			Standard_Deviation stdev(vals);
+			return Convert::ToString(stdev.Calculate());
+		}
 }
 
 System::String^ process(System::String^ expression, double uLim, double lLim, double offset) {

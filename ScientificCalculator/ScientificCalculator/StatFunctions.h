@@ -39,10 +39,12 @@ public:
 	}
 };
 ref class Median : public statistical {
+
 public:
+
 	Median(array<double>^a) :statistical(a) {
 	}
-	double median() {///double Calculate()
+	double Calculate() override {///double Calculate()
 					 // Allocate an array of the same size and sort it.
 		//double* Sorted = new double[size];
 		array<double>^Sorted = gcnew array<double>(size);
@@ -69,6 +71,7 @@ public:
 		//delete[] Sorted;
 		return Median;
 	}
+	
 };
 ref class Mode : public statistical {
 public:

@@ -350,22 +350,22 @@ namespace ScientificCalculator {
 			// op2
 			// 
 			this->op2->AutoSize = true;
-			this->op2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->op2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->op2->Location = System::Drawing::Point(2, 90);
 			this->op2->Name = L"op2";
-			this->op2->Size = System::Drawing::Size(20, 23);
+			this->op2->Size = System::Drawing::Size(17, 19);
 			this->op2->TabIndex = 47;
 			this->op2->Text = L"0";
 			// 
 			// op1
 			// 
 			this->op1->AutoSize = true;
-			this->op1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->op1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->op1->Location = System::Drawing::Point(2, 33);
 			this->op1->Name = L"op1";
-			this->op1->Size = System::Drawing::Size(20, 23);
+			this->op1->Size = System::Drawing::Size(17, 19);
 			this->op1->TabIndex = 46;
 			this->op1->Text = L"0";
 			// 
@@ -395,7 +395,7 @@ namespace ScientificCalculator {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(1, 302);
+			this->label1->Location = System::Drawing::Point(1, 303);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(270, 15);
 			this->label1->TabIndex = 4;
@@ -706,7 +706,7 @@ namespace ScientificCalculator {
 			// 
 			this->button25->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button25->Location = System::Drawing::Point(374, 318);
+			this->button25->Location = System::Drawing::Point(374, 324);
 			this->button25->Name = L"button25";
 			this->button25->Size = System::Drawing::Size(75, 23);
 			this->button25->TabIndex = 33;
@@ -718,7 +718,7 @@ namespace ScientificCalculator {
 			// 
 			this->button26->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button26->Location = System::Drawing::Point(293, 318);
+			this->button26->Location = System::Drawing::Point(293, 324);
 			this->button26->Name = L"button26";
 			this->button26->Size = System::Drawing::Size(75, 23);
 			this->button26->TabIndex = 32;
@@ -730,7 +730,7 @@ namespace ScientificCalculator {
 			// 
 			this->button27->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button27->Location = System::Drawing::Point(131, 318);
+			this->button27->Location = System::Drawing::Point(131, 324);
 			this->button27->Name = L"button27";
 			this->button27->Size = System::Drawing::Size(75, 23);
 			this->button27->TabIndex = 31;
@@ -742,7 +742,7 @@ namespace ScientificCalculator {
 			// 
 			this->button28->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button28->Location = System::Drawing::Point(212, 318);
+			this->button28->Location = System::Drawing::Point(212, 324);
 			this->button28->Name = L"button28";
 			this->button28->Size = System::Drawing::Size(75, 23);
 			this->button28->TabIndex = 30;
@@ -754,7 +754,7 @@ namespace ScientificCalculator {
 			// 
 			this->button29->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button29->Location = System::Drawing::Point(374, 348);
+			this->button29->Location = System::Drawing::Point(374, 354);
 			this->button29->Name = L"button29";
 			this->button29->Size = System::Drawing::Size(75, 23);
 			this->button29->TabIndex = 37;
@@ -766,7 +766,7 @@ namespace ScientificCalculator {
 			// 
 			this->button30->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button30->Location = System::Drawing::Point(293, 348);
+			this->button30->Location = System::Drawing::Point(293, 354);
 			this->button30->Name = L"button30";
 			this->button30->Size = System::Drawing::Size(75, 23);
 			this->button30->TabIndex = 36;
@@ -778,7 +778,7 @@ namespace ScientificCalculator {
 			// 
 			this->button31->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button31->Location = System::Drawing::Point(131, 348);
+			this->button31->Location = System::Drawing::Point(131, 354);
 			this->button31->Name = L"button31";
 			this->button31->Size = System::Drawing::Size(75, 23);
 			this->button31->TabIndex = 35;
@@ -790,7 +790,7 @@ namespace ScientificCalculator {
 			// 
 			this->button32->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button32->Location = System::Drawing::Point(212, 348);
+			this->button32->Location = System::Drawing::Point(212, 354);
 			this->button32->Name = L"button32";
 			this->button32->Size = System::Drawing::Size(75, 23);
 			this->button32->TabIndex = 34;
@@ -804,7 +804,7 @@ namespace ScientificCalculator {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(1, 374);
+			this->label2->Location = System::Drawing::Point(1, 380);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(166, 15);
 			this->label2->TabIndex = 38;
@@ -838,7 +838,7 @@ namespace ScientificCalculator {
 			// 
 			this->button33->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button33->Location = System::Drawing::Point(374, 395);
+			this->button33->Location = System::Drawing::Point(374, 401);
 			this->button33->Name = L"button33";
 			this->button33->Size = System::Drawing::Size(75, 23);
 			this->button33->TabIndex = 46;
@@ -850,7 +850,7 @@ namespace ScientificCalculator {
 			// 
 			this->button34->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button34->Location = System::Drawing::Point(293, 395);
+			this->button34->Location = System::Drawing::Point(293, 401);
 			this->button34->Name = L"button34";
 			this->button34->Size = System::Drawing::Size(75, 23);
 			this->button34->TabIndex = 45;
@@ -862,7 +862,7 @@ namespace ScientificCalculator {
 			// 
 			this->button35->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button35->Location = System::Drawing::Point(131, 395);
+			this->button35->Location = System::Drawing::Point(131, 401);
 			this->button35->Name = L"button35";
 			this->button35->Size = System::Drawing::Size(75, 23);
 			this->button35->TabIndex = 44;
@@ -874,7 +874,7 @@ namespace ScientificCalculator {
 			// 
 			this->button36->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button36->Location = System::Drawing::Point(212, 395);
+			this->button36->Location = System::Drawing::Point(212, 401);
 			this->button36->Name = L"button36";
 			this->button36->Size = System::Drawing::Size(75, 23);
 			this->button36->TabIndex = 43;
@@ -886,7 +886,7 @@ namespace ScientificCalculator {
 			// 
 			this->button37->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button37->Location = System::Drawing::Point(212, 424);
+			this->button37->Location = System::Drawing::Point(212, 430);
 			this->button37->Name = L"button37";
 			this->button37->Size = System::Drawing::Size(139, 23);
 			this->button37->TabIndex = 47;
