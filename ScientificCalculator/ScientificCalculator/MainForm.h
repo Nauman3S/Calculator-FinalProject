@@ -545,6 +545,7 @@ namespace ScientificCalculator {
 			this->button25->TabIndex = 33;
 			this->button25->Text = L"^";
 			this->button25->UseVisualStyleBackColor = true;
+			this->button25->Click += gcnew System::EventHandler(this, &MainForm::button25_Click);
 			// 
 			// button26
 			// 
@@ -556,6 +557,7 @@ namespace ScientificCalculator {
 			this->button26->TabIndex = 32;
 			this->button26->Text = L"tan";
 			this->button26->UseVisualStyleBackColor = true;
+			this->button26->Click += gcnew System::EventHandler(this, &MainForm::button26_Click);
 			// 
 			// button27
 			// 
@@ -567,6 +569,7 @@ namespace ScientificCalculator {
 			this->button27->TabIndex = 31;
 			this->button27->Text = L"sin";
 			this->button27->UseVisualStyleBackColor = true;
+			this->button27->Click += gcnew System::EventHandler(this, &MainForm::button27_Click);
 			// 
 			// button28
 			// 
@@ -578,6 +581,7 @@ namespace ScientificCalculator {
 			this->button28->TabIndex = 30;
 			this->button28->Text = L"cos";
 			this->button28->UseVisualStyleBackColor = true;
+			this->button28->Click += gcnew System::EventHandler(this, &MainForm::button28_Click);
 			// 
 			// button29
 			// 
@@ -961,6 +965,29 @@ private: System::Void button23_Click(System::Object^  sender, System::EventArgs^
 
 	opSel = false;
 	this->pictureBox3->Load("OpImgs/sqrS.png");
+}
+private: System::Void button27_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->op1->Text = "x=" + this->textBox1->Text;
+	this->textBox1->Text = "sin(";
+	opSel = false;
+	this->op2->Text = "radians";
+}
+private: System::Void button28_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->op1->Text = "x=" + this->textBox1->Text;
+	this->textBox1->Text = "cos(";
+	opSel = false;
+	this->op2->Text = "radians";
+}
+private: System::Void button26_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->op1->Text = "x=" + this->textBox1->Text;
+	this->textBox1->Text = "tan(";
+	opSel = false;
+	this->op2->Text = "radians";
+}
+private: System::Void button25_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("^");
+	opSel = true;
+	this->pictureBox3->Load("OpImgs/mulS.png");
 }
 };
 }

@@ -12,6 +12,8 @@ double der(double x, double c[], int n)
 }
 
 int main(void){
-	double d[]={4};
+	double d[]={1,2,2}; ///variable exponents
+	cout<<der2(3,d,2);
+	
 	
 }

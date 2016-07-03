@@ -15,7 +15,7 @@ System::String^ process(System::String^ expression) {
 	using namespace System;
 	
 	Console::WriteLine("adasd");
-	String^ delimStr = "+-/x";
+	String^ delimStr = "+-/x(^";
 	Console::WriteLine("delimiter : '{0}'", delimStr);
 	array<Char>^ delimiter = delimStr->ToCharArray();
 	array<String^>^ words;
@@ -54,9 +54,26 @@ System::String^ process(System::String^ expression) {
 		calulationRes = Convert::ToString(cal);
 		return calulationRes;
 	}
-	
-	
-	
+	else if (expression->Contains("^")) {
+		cal = bs.power(Convert::ToDouble(words[0]), Convert::ToDouble(words[1]));
+		calulationRes = Convert::ToString(cal);
+		return calulationRes;
+	}
+	else if (expression->Contains("sin(")) {
+		cal = bs.sinAngle(Convert::ToDouble(words[1]));
+		calulationRes = Convert::ToString(cal);
+		return calulationRes;
+	}
+	else if (expression->Contains("cos(")) {
+		cal = bs.cosAngle(Convert::ToDouble(words[1]));
+		calulationRes = Convert::ToString(cal);
+		return calulationRes;
+	}
+	else if (expression->Contains("tan(")) {
+		cal = bs.tanAngle(Convert::ToDouble(words[1]));
+		calulationRes = Convert::ToString(cal);
+		return calulationRes;
+	}
 	//gg = words[0]->ToInt32 + words[1]->ToInt32
 }
 
