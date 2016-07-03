@@ -1,3 +1,5 @@
+#include "CalcHandler.h"
+#include <string>
 #pragma once
 
 namespace ScientificCalculator {
@@ -72,6 +74,18 @@ namespace ScientificCalculator {
 	private: System::Windows::Forms::Button^  button31;
 	private: System::Windows::Forms::Button^  button32;
 	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::ListBox^  listBox1;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::PictureBox^  pictureBox3;
+	private: System::Windows::Forms::Button^  button33;
+	private: System::Windows::Forms::Button^  button34;
+	private: System::Windows::Forms::Button^  button35;
+	private: System::Windows::Forms::Button^  button36;
+	private: System::Windows::Forms::Button^  button37;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  op2;
+	private: System::Windows::Forms::Label^  op1;
+
 	protected:
 
 	private:
@@ -90,6 +104,9 @@ namespace ScientificCalculator {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->op2 = (gcnew System::Windows::Forms::Label());
+			this->op1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -126,7 +143,17 @@ namespace ScientificCalculator {
 			this->button31 = (gcnew System::Windows::Forms::Button());
 			this->button32 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->button33 = (gcnew System::Windows::Forms::Button());
+			this->button34 = (gcnew System::Windows::Forms::Button());
+			this->button35 = (gcnew System::Windows::Forms::Button());
+			this->button36 = (gcnew System::Windows::Forms::Button());
+			this->button37 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -143,14 +170,48 @@ namespace ScientificCalculator {
 			// 
 			// groupBox1
 			// 
-			this->groupBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->groupBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
+			this->groupBox1->Controls->Add(this->op2);
+			this->groupBox1->Controls->Add(this->op1);
+			this->groupBox1->Controls->Add(this->pictureBox3);
 			this->groupBox1->Location = System::Drawing::Point(579, 127);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(104, 337);
+			this->groupBox1->Size = System::Drawing::Size(104, 214);
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Operations";
+			// 
+			// op2
+			// 
+			this->op2->AutoSize = true;
+			this->op2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->op2->Location = System::Drawing::Point(2, 90);
+			this->op2->Name = L"op2";
+			this->op2->Size = System::Drawing::Size(20, 23);
+			this->op2->TabIndex = 47;
+			this->op2->Text = L"0";
+			// 
+			// op1
+			// 
+			this->op1->AutoSize = true;
+			this->op1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->op1->Location = System::Drawing::Point(2, 33);
+			this->op1->Name = L"op1";
+			this->op1->Size = System::Drawing::Size(20, 23);
+			this->op1->TabIndex = 46;
+			this->op1->Text = L"0";
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Location = System::Drawing::Point(34, 63);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(40, 33);
+			this->pictureBox3->TabIndex = 45;
+			this->pictureBox3->TabStop = false;
 			// 
 			// button1
 			// 
@@ -162,6 +223,7 @@ namespace ScientificCalculator {
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"0";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MainForm::button1_Click);
 			// 
 			// label1
 			// 
@@ -171,9 +233,9 @@ namespace ScientificCalculator {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(1, 302);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(186, 15);
+			this->label1->Size = System::Drawing::Size(270, 15);
 			this->label1->TabIndex = 4;
-			this->label1->Text = L"Trignometric Functions _____";
+			this->label1->Text = L"Trignometric and Calculus Functions _____";
 			// 
 			// textBox1
 			// 
@@ -210,6 +272,7 @@ namespace ScientificCalculator {
 			this->button2->TabIndex = 7;
 			this->button2->Text = L"1";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MainForm::button2_Click);
 			// 
 			// button3
 			// 
@@ -221,6 +284,7 @@ namespace ScientificCalculator {
 			this->button3->TabIndex = 8;
 			this->button3->Text = L"2";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MainForm::button3_Click);
 			// 
 			// button4
 			// 
@@ -232,6 +296,7 @@ namespace ScientificCalculator {
 			this->button4->TabIndex = 9;
 			this->button4->Text = L"3";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MainForm::button4_Click);
 			// 
 			// button5
 			// 
@@ -243,6 +308,7 @@ namespace ScientificCalculator {
 			this->button5->TabIndex = 10;
 			this->button5->Text = L"4";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MainForm::button5_Click);
 			// 
 			// button6
 			// 
@@ -254,6 +320,7 @@ namespace ScientificCalculator {
 			this->button6->TabIndex = 11;
 			this->button6->Text = L"5";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MainForm::button6_Click);
 			// 
 			// button7
 			// 
@@ -265,6 +332,7 @@ namespace ScientificCalculator {
 			this->button7->TabIndex = 12;
 			this->button7->Text = L"6";
 			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MainForm::button7_Click);
 			// 
 			// button8
 			// 
@@ -276,6 +344,7 @@ namespace ScientificCalculator {
 			this->button8->TabIndex = 13;
 			this->button8->Text = L"7";
 			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MainForm::button8_Click);
 			// 
 			// button9
 			// 
@@ -287,6 +356,7 @@ namespace ScientificCalculator {
 			this->button9->TabIndex = 14;
 			this->button9->Text = L"8";
 			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MainForm::button9_Click);
 			// 
 			// button10
 			// 
@@ -298,6 +368,7 @@ namespace ScientificCalculator {
 			this->button10->TabIndex = 15;
 			this->button10->Text = L"9";
 			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MainForm::button10_Click);
 			// 
 			// button11
 			// 
@@ -309,6 +380,7 @@ namespace ScientificCalculator {
 			this->button11->TabIndex = 16;
 			this->button11->Text = L"CE";
 			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &MainForm::button11_Click);
 			// 
 			// button12
 			// 
@@ -320,6 +392,7 @@ namespace ScientificCalculator {
 			this->button12->TabIndex = 17;
 			this->button12->Text = L"C";
 			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &MainForm::button12_Click);
 			// 
 			// button13
 			// 
@@ -342,6 +415,7 @@ namespace ScientificCalculator {
 			this->button14->TabIndex = 19;
 			this->button14->Text = L"/";
 			this->button14->UseVisualStyleBackColor = true;
+			this->button14->Click += gcnew System::EventHandler(this, &MainForm::button14_Click);
 			// 
 			// button15
 			// 
@@ -365,6 +439,7 @@ namespace ScientificCalculator {
 			this->button16->TabIndex = 21;
 			this->button16->Text = L"-";
 			this->button16->UseVisualStyleBackColor = true;
+			this->button16->Click += gcnew System::EventHandler(this, &MainForm::button16_Click);
 			// 
 			// button17
 			// 
@@ -376,6 +451,7 @@ namespace ScientificCalculator {
 			this->button17->TabIndex = 22;
 			this->button17->Text = L"+";
 			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &MainForm::button17_Click);
 			// 
 			// button18
 			// 
@@ -387,6 +463,7 @@ namespace ScientificCalculator {
 			this->button18->TabIndex = 23;
 			this->button18->Text = L"?";
 			this->button18->UseVisualStyleBackColor = true;
+			this->button18->Click += gcnew System::EventHandler(this, &MainForm::button18_Click);
 			// 
 			// button19
 			// 
@@ -398,6 +475,7 @@ namespace ScientificCalculator {
 			this->button19->TabIndex = 24;
 			this->button19->Text = L".";
 			this->button19->UseVisualStyleBackColor = true;
+			this->button19->Click += gcnew System::EventHandler(this, &MainForm::button19_Click);
 			// 
 			// button20
 			// 
@@ -409,6 +487,7 @@ namespace ScientificCalculator {
 			this->button20->TabIndex = 25;
 			this->button20->Text = L"=";
 			this->button20->UseVisualStyleBackColor = true;
+			this->button20->Click += gcnew System::EventHandler(this, &MainForm::button20_Click);
 			// 
 			// button21
 			// 
@@ -442,6 +521,7 @@ namespace ScientificCalculator {
 			this->button23->TabIndex = 27;
 			this->button23->Text = L"?";
 			this->button23->UseVisualStyleBackColor = true;
+			this->button23->Click += gcnew System::EventHandler(this, &MainForm::button23_Click);
 			// 
 			// button24
 			// 
@@ -453,6 +533,7 @@ namespace ScientificCalculator {
 			this->button24->TabIndex = 26;
 			this->button24->Text = L"%";
 			this->button24->UseVisualStyleBackColor = true;
+			this->button24->Click += gcnew System::EventHandler(this, &MainForm::button24_Click);
 			// 
 			// button25
 			// 
@@ -554,13 +635,113 @@ namespace ScientificCalculator {
 			this->label2->TabIndex = 38;
 			this->label2->Text = L"Statistical Functions _____";
 			// 
+			// listBox1
+			// 
+			this->listBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->listBox1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->ItemHeight = 18;
+			this->listBox1->Location = System::Drawing::Point(579, 361);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(104, 220);
+			this->listBox1->TabIndex = 41;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(530, 343);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(85, 15);
+			this->label3->TabIndex = 42;
+			this->label3->Text = L"History _____";
+			// 
+			// button33
+			// 
+			this->button33->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button33->Location = System::Drawing::Point(374, 395);
+			this->button33->Name = L"button33";
+			this->button33->Size = System::Drawing::Size(75, 23);
+			this->button33->TabIndex = 46;
+			this->button33->Text = L"Variance";
+			this->button33->UseVisualStyleBackColor = true;
+			this->button33->Click += gcnew System::EventHandler(this, &MainForm::button33_Click);
+			// 
+			// button34
+			// 
+			this->button34->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button34->Location = System::Drawing::Point(293, 395);
+			this->button34->Name = L"button34";
+			this->button34->Size = System::Drawing::Size(75, 23);
+			this->button34->TabIndex = 45;
+			this->button34->Text = L"Median";
+			this->button34->UseVisualStyleBackColor = true;
+			// 
+			// button35
+			// 
+			this->button35->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button35->Location = System::Drawing::Point(131, 395);
+			this->button35->Name = L"button35";
+			this->button35->Size = System::Drawing::Size(75, 23);
+			this->button35->TabIndex = 44;
+			this->button35->Text = L"Mean";
+			this->button35->UseVisualStyleBackColor = true;
+			// 
+			// button36
+			// 
+			this->button36->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button36->Location = System::Drawing::Point(212, 395);
+			this->button36->Name = L"button36";
+			this->button36->Size = System::Drawing::Size(75, 23);
+			this->button36->TabIndex = 43;
+			this->button36->Text = L"Mode";
+			this->button36->UseVisualStyleBackColor = true;
+			// 
+			// button37
+			// 
+			this->button37->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button37->Location = System::Drawing::Point(212, 424);
+			this->button37->Name = L"button37";
+			this->button37->Size = System::Drawing::Size(139, 23);
+			this->button37->TabIndex = 47;
+			this->button37->Text = L"Standard Deviation";
+			this->button37->UseVisualStyleBackColor = true;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(1, 462);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(144, 15);
+			this->label4->TabIndex = 48;
+			this->label4->Text = L"Matrix Functions _____";
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-			this->ClientSize = System::Drawing::Size(695, 476);
+			this->ClientSize = System::Drawing::Size(695, 606);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->button37);
+			this->Controls->Add(this->button33);
+			this->Controls->Add(this->button34);
+			this->Controls->Add(this->button35);
+			this->Controls->Add(this->button36);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->listBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button29);
 			this->Controls->Add(this->button30);
@@ -602,7 +783,11 @@ namespace ScientificCalculator {
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MainForm";
+			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -610,6 +795,172 @@ namespace ScientificCalculator {
 		}
 #pragma endregion
 	private: System::Void button15_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->textBox1->AppendText("x");
+		opSel = true;
+		this->pictureBox3->Load("OpImgs/mulS.png");
 	}
+private: System::Void button24_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->listBox1->Items->Add("aabb");
+	this->pictureBox3->Load("StartUp.png");
+
+
+	
+}
+private: System::Void button33_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void MainForm_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		//this->textBox1->Text = "1";
+		this->textBox1->AppendText("1");
+		if (opSel == false) {
+			this->op1->Text = this->op1->Text +"1";
+		}
+		else if (opSel == true) {
+			this->op2->Text = this->op2->Text +"1";
+		}
+	
+
+}
+private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("2");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"2";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"2";
+	}
+}
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("3");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"3";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"3";
+	}
+}
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("4");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"4";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"4";
+	}
+}
+private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("5");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"5";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"5";
+	}
+}
+private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("6");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"6";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"6";
+	}
+}
+private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("7");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"7";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"7";
+	}
+}
+private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("8");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"8";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"8";
+	}
+}
+private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("9");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"9";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"9";
+	}
+}
+private: System::Void button17_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("+");
+	opSel = true;
+	this->pictureBox3->Load("OpImgs/addS.png");
+}
+private: System::Void button20_Click(System::Object^  sender, System::EventArgs^  e) {
+	opSel = false;
+	this->textBox1->Text = process(this->textBox1->Text);
+	
+}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("0");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"0";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"0";
+	}
+}
+private: System::Void button19_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText(".");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +".";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +".";
+	}
+}
+private: System::Void button18_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("3.14");
+	if (opSel == false) {
+		this->op1->Text = this->op1->Text +"?=3.14";
+	}
+	else if (opSel == true) {
+		this->op2->Text = this->op2->Text +"?=3.14";
+	}
+}
+private: System::Void button14_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("/");
+	opSel = true;
+	this->pictureBox3->Load("OpImgs/divS.png");
+
+	
+}
+private: System::Void button16_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("-");
+	opSel = true;
+	this->pictureBox3->Load("OpImgs/minS.png");
+}
+private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->Text = "";
+	opSel = false;
+	this->op1->Text = "0";
+	this->op2->Text = "0";
+}
+private: System::Void button12_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->Text = "";
+	opSel = false;
+	this->op1->Text = "0";
+	this->op2->Text = "0";
+}
+private: System::Void button23_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->AppendText("Sqr(");
+	this->op1->Text = this->textBox1->Text;
+
+	opSel = false;
+	this->pictureBox3->Load("OpImgs/sqrS.png");
+}
 };
 }

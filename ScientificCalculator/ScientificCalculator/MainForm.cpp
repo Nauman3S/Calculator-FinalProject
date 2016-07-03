@@ -5,12 +5,21 @@ using namespace System::Windows::Forms;
 
 
 [STAThread]
-void Main(array<String^>^ args)
+void Main(cli::array<String^>^args)/////becauase of having multiple header files and "using namespace std" in each cause error so use
+//////////////////////////////////////   cli::array........
 {
+	
+
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	ScientificCalculator::MainForm form;
 	//RandomNumberGenerator::MyForm form;
 	Application::Run(%form);
+
+
+	
+
+
+	
 }
 

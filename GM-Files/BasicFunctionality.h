@@ -1,7 +1,7 @@
 #include<windows.h>
 #include<time.h>
 #include<math.h>
-#include<iostream.h>
+#include<iostream>
 
 using namespace std;
 

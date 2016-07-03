@@ -2,7 +2,9 @@
 #include<math.h>
 
 using namespace std;
+class tester {
 
+};
 class statistical{
 protected:
 	double *dataArray;
@@ -139,67 +141,69 @@ public:
 	}
 
 };
-int main()
-{
-//double d[] = { 2, 2, 4, 2, 4 };
-	//int s = 5;
-	int a;
-	cout<<"What do you want to find:"<<endl<<"*********************************"<<endl<<"Press 1 for Mean"<<endl<<"Press 2 for Mode"<<endl<<"Press 3 for Median"<<endl<<"Press 4 for Variance"<<endl<<"Press 5 for Standard Deviation"<<endl<<"*********************************"<<endl;
-	cin>>a;
-	cout<<"*********************************"<<endl;
-	double d[50];
-	int s;
-	cout<<endl<<"How many numbers do you want to enter:";
-	cin>>s;
-	cout<<endl;
-	cout<<"*********************************"<<endl;
-	for(int i=0;i<s;i++)
-	{
-		
-		cout<<"Enter "<<i+1<<"th number:";
-		cin>>d[i];
-	}
-	
-	if(a==1)
-	{
-		Mean mean(d, s);// = new Mean(d,s);
-		cout<<"*********************************"<<endl;
-		//cout<<endl;
-		cout << endl << "Mean is = ";
-		mean.print();
-	}
-	
-	if(a==2)
-	{
-		Mode mode(d, s);// = new Mode(d,s);
-		cout<<"*********************************"<<endl;
-		//cout<<endl;
-		cout << endl << "Mode is = ";
-		mode.print();
-	}
-	if(a==3)
-	{
-		Median median(d, s);// = new Median(d,s);	
-		cout<<"*********************************"<<endl;
-		cout<<endl;
-		cout << "Median is = ";
-		median.print();
-	}
-	if(a==4)
-	{
-		Variance variance(d, s);
-		cout<<"*********************************"<<endl;
-		cout << endl << "Variance is = ";
-		variance.print();
-	}
-	if(a==5)
-	{
-	Standard_Deviation standard_deviation(d, s);
-	cout<<"*********************************"<<endl;
-	cout << endl << "Standard Deviation is = ";
-	standard_deviation.print();
-	}
-	cout << endl;
-	//system("pause");
-
-}
+//int main()
+//{
+////double d[] = { 2, 2, 4, 2, 4 };
+//	//int s = 5;
+//	int a;
+//	cout<<"What do you want to find:"<<endl<<"*********************************"<<endl<<"Press 1 for Mean"<<endl<<"Press 2 for Mode"<<endl<<"Press 3 for Median"<<endl<<"Press 4 for Variance"<<endl<<"Press 5 for Standard Deviation"<<endl<<"*********************************"<<endl;
+//	cin>>a;
+//	cout<<"*********************************"<<endl;
+//	double d[50];
+//	int s;
+//	cout<<endl<<"How many numbers do you want to enter:";
+//	cin>>s;
+//	cout<<endl;
+//	cout<<"*********************************"<<endl;
+//	for(int i=0;i<s;i++)
+//	{
+//		
+//		cout<<"Enter "<<i+1<<"th number:";
+//		cin>>d[i];
+//	}
+//	
+//	if(a==1)
+//	{
+//		Mean mean(d, s);// = new Mean(d,s);
+//		cout<<"*********************************"<<endl;
+//		//cout<<endl;
+//		cout << endl << "Mean is = ";
+//		mean.print();
+//	}
+//	
+//	if(a==2)
+//	{
+//		Mode mode(d, s);// = new Mode(d,s);
+//		cout<<"*********************************"<<endl;
+//		//cout<<endl;
+//		cout << endl << "Mode is = ";
+//		mode.print();
+//	}
+//	if(a==3)
+//	{
+//		Median median(d, s);// = new Median(d,s);	
+//		cout<<"*********************************"<<endl;
+//		cout<<endl;
+//		cout << "Median is = ";
+//		median.print();
+//	}
+//	if(a==4)
+//	{
+//		Variance variance(d, s);
+//		cout<<"*********************************"<<endl;
+//		cout << endl << "Variance is = ";
+//		variance.print();
+//	}
+//	if(a==5)
+//	{
+//	Standard_Deviation standard_deviation(d, s);
+//	cout<<"*********************************"<<endl;
+//	cout << endl << "Standard Deviation is = ";
+//	standard_deviation.print();
+//	}
+//	cout << endl;
+//	//system("pause");
+//
+//int a11;
+//cin>>a11;
+//}
