@@ -1,30 +1,31 @@
-#include<iostream>
+
 #include<math.h>
 
-using namespace std;
-class tester {
+//using namespace std;
+ref class tester {
 
 };
-class statistical{
+ref class statistical {
 protected:
-	double *dataArray;
+	array<double>^ dataArray;
 	int size;
 public:
-	statistical(double a[], int s){
-		dataArray = new double[s];
-		for (int i = 0; i<s; i++){
+	statistical(array<double>^a) {
+		int s = a->Length;
+		dataArray = gcnew array<double>(s);
+		for (int i = 0; i<s; i++) {
 			dataArray[i] = a[i];
 		}
 
 		size = s;
 	}
-	virtual void print() = 0;
+	virtual double Calculate() = 0;
 };
-class Mean : public statistical{
+ref class Mean : public statistical {
 
 public:
 
-	Mean(double a[]=0, int s=0) :statistical(a, s){
+	Mean(array<double>^a) :statistical(a) {
 
 	}
 	double mean()
@@ -35,16 +36,16 @@ public:
 		}
 		return Sum / size;
 	}
-	void print(){
-		cout << mean();
+	double Calculate() {
+		return mean();
 	}
 };
-class Median : public statistical{
+ref class Median : public statistical {
 public:
-	Median(double a[], int s) :statistical(a, s){
+	Median(double a[], int s) :statistical(a, s) {
 	}
-	void print(){
-		// Allocate an array of the same size and sort it.
+	double median() {///double Calculate()
+					 // Allocate an array of the same size and sort it.
 		double* Sorted = new double[size];
 		for (int i = 0; i < size; ++i) {
 			Sorted[i] = dataArray[i];
@@ -67,14 +68,14 @@ public:
 			Median = Sorted[size / 2];
 		}
 		delete[] Sorted;
-		cout << Median;
+		return Median;
 	}
 };
-class Mode : public statistical{
+ref class Mode : public statistical {
 public:
-	Mode(double a[], int s) :statistical(a, s){
+	Mode(double a[], int s) :statistical(a, s) {
 	}
-	void print(){
+	double Calculate() {
 		int* ipRepetition = new int[size];
 		for (int i = 0; i < size; ++i) {
 			ipRepetition[i] = 0;
@@ -94,13 +95,14 @@ public:
 			}
 		}
 		delete[] ipRepetition;
-		cout << dataArray[iMaxRepeat];
+		//cout << dataArray[iMaxRepeat];
+		return dataArray[iMaxRepeat];
 	}
 };
 
-class Variance : public Mean{
+ref class Variance : public Mean {
 public:
-	Variance(double a[], int s) :Mean(a, s){
+	Variance(double a[], int s) :Mean(a, s) {
 
 	}
 
@@ -117,30 +119,60 @@ public:
 		double v = temp / max;
 		return v;
 	}
-	
-	void print(){
-		
-		cout << var();
-		
+
+	double Calculate() {
+
+		return var();
+
 	}
 
 };
 
-class Standard_Deviation : public Variance
+ref class Standard_Deviation : public Variance
 {
 public:
-	Standard_Deviation(double a[], int s) :Variance(a, s){
+	Standard_Deviation(double a[], int s) :Variance(a, s) {
 
 	}
 
-	void print(){
+	double Calculate() {
 
 
-		
-		cout <<  sqrt(var());
+
+		return sqrt(var());
 	}
 
 };
+//////Adapter
+
+
+static array<double>^ ManagedArray(double* arr, int size) {
+	using namespace System;
+	array<double>^ retval = gcnew array<double>(size);
+	for (int ix = 0; ix < size; ++ix)
+		retval[ix] = (int)*arr++;
+	return retval;
+}
+
+//int main(array<System::String ^> ^args) {
+//	long arr[] = { 1, 2, 3, 4 };
+//	array<int>^ marr = MakeManaged(arr, 4);
+//	for (int ix = 0; ix < marr->Length; ++ix)
+//		Console::WriteLine(marr[ix]);
+//	Console::ReadLine();
+//	return 0;
+//}
+
+void UnManage(array<double>^ managed, double* dest) {
+	//double *arr=new double [managed->Length];
+	for (int i = 0; i < managed->Length; i++) {
+		dest[i] = managed[i];
+	}
+	//System::Runtime::InteropServices::Marshal::Copy(managed,0,arr,(managed->Length));
+
+}
+
+/////////////////
 //int main()
 //{
 ////double d[] = { 2, 2, 4, 2, 4 };
@@ -168,7 +200,7 @@ public:
 //		cout<<"*********************************"<<endl;
 //		//cout<<endl;
 //		cout << endl << "Mean is = ";
-//		mean.print();
+//		mean.Calculate();
 //	}
 //	
 //	if(a==2)
@@ -177,7 +209,7 @@ public:
 //		cout<<"*********************************"<<endl;
 //		//cout<<endl;
 //		cout << endl << "Mode is = ";
-//		mode.print();
+//		mode.Calculate();
 //	}
 //	if(a==3)
 //	{
@@ -185,21 +217,21 @@ public:
 //		cout<<"*********************************"<<endl;
 //		cout<<endl;
 //		cout << "Median is = ";
-//		median.print();
+//		median.Calculate();
 //	}
 //	if(a==4)
 //	{
 //		Variance variance(d, s);
 //		cout<<"*********************************"<<endl;
 //		cout << endl << "Variance is = ";
-//		variance.print();
+//		variance.Calculate();
 //	}
 //	if(a==5)
 //	{
 //	Standard_Deviation standard_deviation(d, s);
 //	cout<<"*********************************"<<endl;
 //	cout << endl << "Standard Deviation is = ";
-//	standard_deviation.print();
+//	standard_deviation.Calculate();
 //	}
 //	cout << endl;
 //	//system("pause");

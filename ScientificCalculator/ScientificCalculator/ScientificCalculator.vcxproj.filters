@@ -19,9 +19,6 @@
     <ClInclude Include="MainForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\GM-Files\StatFunctions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BasicFunctionality.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -29,6 +26,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Trignometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StatFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,12 +2,45 @@
 #include<iostream>
 #include "BasicFunctionality.h"
 #include"Trignometry.h"
+#include "StatFunctions.h"
 #pragma once
 
 bool opSel = false;
 
 float Valop1 = 0.0;
 float Valop2 = 0.0;
+
+System::String^ processStat(System::String^ expression) {
+	////Stat processor
+	array<double>^ vals;
+	Basics bs;
+	using namespace System;
+	String  ^expr;
+	expr = expression;
+	
+	Console::WriteLine("adasd");
+	if (expr->Contains("Mean(")) {
+		expr = expr->Remove(0, 5);
+
+		//return expr;
+		String^ delimStr = ",";
+		Console::WriteLine("delimiter : '{0}'", delimStr);
+		array<Char>^ delimiter = delimStr->ToCharArray();
+		array<String^>^ words;
+		words = expr->Split(delimiter);
+		vals = gcnew array<double>(words->Length);
+
+		for (int i = 0; i < words->Length; i++) {
+			vals[i] = Convert::ToDouble(words[i]);
+
+		}
+		Mean m(vals);
+	
+		return Convert::ToString(m.Calculate());
+		
+	}
+}
+
 System::String^ process(System::String^ expression, double uLim, double lLim, double offset) {
 	////Integration processor
 	Basics bs;
