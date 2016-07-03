@@ -1,21 +1,61 @@
 #include <string>
 #include<iostream>
 #include "BasicFunctionality.h"
-
+#include"Trignometry.h"
 #pragma once
 
 bool opSel = false;
 
 float Valop1 = 0.0;
 float Valop2 = 0.0;
-
-System::String^ process(System::String^ expression) {
+System::String^ process(System::String^ expression, double uLim, double lLim, double offset) {
+	////Integration processor
 	Basics bs;
+	using namespace System;
+	String  ^expr;
+	expr = expression;
+	TrignometryHandler th;
+	Console::WriteLine("adasd");
+	if (expr->Contains("Integ(")) {
+		expr = expr->Remove(0,6);
 
+		//return expr;
+		String^ delimStr = ",";
+		Console::WriteLine("delimiter : '{0}'", delimStr);
+		array<Char>^ delimiter = delimStr->ToCharArray();
+		array<String^>^ words;
+		words = expr->Split(delimiter);
+		return th.integrate(words, uLim, lLim, offset);
+	}
+}
+System::String^ process(System::String^ expression,double offset,double x) {
+	///derivative Processor
+	Basics bs;
+	using namespace System;
+	String  ^expr;
+	expr = expression;
+	TrignometryHandler th;
+	Console::WriteLine("adasd");
+	if (expr->Contains("d(")) {
+		expr = expr->Remove(0, 2);
+		
+		//return expr;
+		String^ delimStr = ",";
+		Console::WriteLine("delimiter : '{0}'", delimStr);
+		array<Char>^ delimiter = delimStr->ToCharArray();
+		array<String^>^ words;
+		words = expr->Split(delimiter);
+		return th.derivate(words, offset, x);
+	}
+
+}
+System::String^ process(System::String^ expression) {
+	
+	Basics bs;
 	using namespace System;
 	
 	Console::WriteLine("adasd");
-	String^ delimStr = "+-/x(^";
+	String^ delimStr = "(+-/X^";
 	Console::WriteLine("delimiter : '{0}'", delimStr);
 	array<Char>^ delimiter = delimStr->ToCharArray();
 	array<String^>^ words;
@@ -44,7 +84,7 @@ System::String^ process(System::String^ expression) {
 		calulationRes = Convert::ToString(cal);
 		return calulationRes;
 	}
-	if (expression->Contains("x")) {
+	if (expression->Contains("X")) {
 		cal = bs.multiply(Convert::ToDouble(words[0]), Convert::ToDouble(words[1]));
 		calulationRes = Convert::ToString(cal);
 		return calulationRes;
@@ -71,6 +111,26 @@ System::String^ process(System::String^ expression) {
 	}
 	else if (expression->Contains("tan(")) {
 		cal = bs.tanAngle(Convert::ToDouble(words[1]));
+		calulationRes = Convert::ToString(cal);
+		return calulationRes;
+	}
+	else if (expression->Contains("inv(")) {
+		cal = bs.inverse(Convert::ToDouble(words[1]));
+		calulationRes = Convert::ToString(cal);
+		return calulationRes;
+	}
+	else if (expression->Contains("mod(")) {
+		cal = bs.mod(Convert::ToDouble(words[1]));
+		calulationRes = Convert::ToString(cal);
+		return calulationRes;
+	}
+	else if (expression->Contains("exp(")) {
+		cal = bs.expo(Convert::ToDouble(words[1]));
+		calulationRes = Convert::ToString(cal);
+		return calulationRes;
+	}
+	else if (expression->Contains("sqr(")) {
+		cal = bs.squareRoot(Convert::ToDouble(words[1]));
 		calulationRes = Convert::ToString(cal);
 		return calulationRes;
 	}

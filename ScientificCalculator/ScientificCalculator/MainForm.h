@@ -85,6 +85,24 @@ namespace ScientificCalculator {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  op2;
 	private: System::Windows::Forms::Label^  op1;
+	private: System::Windows::Forms::GroupBox^  dBox;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::TextBox^  textBox3;
+	private: System::Windows::Forms::TextBox^  textBox2;
+	private: System::Windows::Forms::GroupBox^  iBox;
+	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::TextBox^  textBox6;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::TextBox^  textBox4;
+	private: System::Windows::Forms::TextBox^  textBox5;
+	private: System::Windows::Forms::Label^  label8;
+
+
+
+
+
+
 
 	protected:
 
@@ -104,6 +122,18 @@ namespace ScientificCalculator {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->iBox = (gcnew System::Windows::Forms::GroupBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->dBox = (gcnew System::Windows::Forms::GroupBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->op2 = (gcnew System::Windows::Forms::Label());
 			this->op1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
@@ -153,6 +183,8 @@ namespace ScientificCalculator {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->groupBox1->SuspendLayout();
+			this->iBox->SuspendLayout();
+			this->dBox->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
@@ -173,15 +205,147 @@ namespace ScientificCalculator {
 			this->groupBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
+			this->groupBox1->Controls->Add(this->iBox);
+			this->groupBox1->Controls->Add(this->dBox);
 			this->groupBox1->Controls->Add(this->op2);
 			this->groupBox1->Controls->Add(this->op1);
 			this->groupBox1->Controls->Add(this->pictureBox3);
 			this->groupBox1->Location = System::Drawing::Point(579, 127);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(104, 214);
+			this->groupBox1->Size = System::Drawing::Size(104, 244);
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Operations";
+			// 
+			// iBox
+			// 
+			this->iBox->Controls->Add(this->textBox6);
+			this->iBox->Controls->Add(this->label7);
+			this->iBox->Controls->Add(this->textBox4);
+			this->iBox->Controls->Add(this->textBox5);
+			this->iBox->Controls->Add(this->label8);
+			this->iBox->Controls->Add(this->label9);
+			this->iBox->Location = System::Drawing::Point(6, 116);
+			this->iBox->Name = L"iBox";
+			this->iBox->Size = System::Drawing::Size(92, 116);
+			this->iBox->TabIndex = 57;
+			this->iBox->TabStop = false;
+			this->iBox->Text = L"Integration";
+			this->iBox->Visible = false;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(6, 78);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(45, 16);
+			this->label9->TabIndex = 57;
+			this->label9->Text = L"offset";
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(50, 77);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(33, 20);
+			this->textBox6->TabIndex = 56;
+			this->textBox6->Text = L"0";
+			this->textBox6->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(4, 52);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(39, 16);
+			this->label7->TabIndex = 55;
+			this->label7->Text = L"L Lim";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(50, 52);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(33, 20);
+			this->textBox4->TabIndex = 53;
+			this->textBox4->Text = L"1";
+			this->textBox4->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(50, 29);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(33, 20);
+			this->textBox5->TabIndex = 52;
+			this->textBox5->Text = L"1";
+			this->textBox5->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->Location = System::Drawing::Point(2, 30);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(41, 16);
+			this->label8->TabIndex = 54;
+			this->label8->Text = L"U Lim";
+			// 
+			// dBox
+			// 
+			this->dBox->Controls->Add(this->label6);
+			this->dBox->Controls->Add(this->textBox3);
+			this->dBox->Controls->Add(this->textBox2);
+			this->dBox->Controls->Add(this->label5);
+			this->dBox->Location = System::Drawing::Point(6, 121);
+			this->dBox->Name = L"dBox";
+			this->dBox->Size = System::Drawing::Size(92, 117);
+			this->dBox->TabIndex = 52;
+			this->dBox->TabStop = false;
+			this->dBox->Text = L"Derivative";
+			this->dBox->Visible = false;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(6, 52);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(29, 23);
+			this->label6->TabIndex = 55;
+			this->label6->Text = L"x=";
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(50, 52);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(33, 20);
+			this->textBox3->TabIndex = 53;
+			this->textBox3->Text = L"1";
+			this->textBox3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(50, 29);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(33, 20);
+			this->textBox2->TabIndex = 52;
+			this->textBox2->Text = L"0";
+			this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(2, 30);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(52, 16);
+			this->label5->TabIndex = 54;
+			this->label5->Text = L"offset=";
 			// 
 			// op2
 			// 
@@ -404,6 +568,7 @@ namespace ScientificCalculator {
 			this->button13->TabIndex = 18;
 			this->button13->Text = L"<-";
 			this->button13->UseVisualStyleBackColor = true;
+			this->button13->Click += gcnew System::EventHandler(this, &MainForm::button13_Click);
 			// 
 			// button14
 			// 
@@ -461,7 +626,7 @@ namespace ScientificCalculator {
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(75, 23);
 			this->button18->TabIndex = 23;
-			this->button18->Text = L"?";
+			this->button18->Text = L"pi";
 			this->button18->UseVisualStyleBackColor = true;
 			this->button18->Click += gcnew System::EventHandler(this, &MainForm::button18_Click);
 			// 
@@ -499,6 +664,7 @@ namespace ScientificCalculator {
 			this->button21->TabIndex = 29;
 			this->button21->Text = L"1/x";
 			this->button21->UseVisualStyleBackColor = true;
+			this->button21->Click += gcnew System::EventHandler(this, &MainForm::button21_Click);
 			// 
 			// button22
 			// 
@@ -510,6 +676,7 @@ namespace ScientificCalculator {
 			this->button22->TabIndex = 28;
 			this->button22->Text = L"^2";
 			this->button22->UseVisualStyleBackColor = true;
+			this->button22->Click += gcnew System::EventHandler(this, &MainForm::button22_Click);
 			// 
 			// button23
 			// 
@@ -519,7 +686,7 @@ namespace ScientificCalculator {
 			this->button23->Name = L"button23";
 			this->button23->Size = System::Drawing::Size(75, 23);
 			this->button23->TabIndex = 27;
-			this->button23->Text = L"?";
+			this->button23->Text = L"sqr";
 			this->button23->UseVisualStyleBackColor = true;
 			this->button23->Click += gcnew System::EventHandler(this, &MainForm::button23_Click);
 			// 
@@ -593,6 +760,7 @@ namespace ScientificCalculator {
 			this->button29->TabIndex = 37;
 			this->button29->Text = L"e^x";
 			this->button29->UseVisualStyleBackColor = true;
+			this->button29->Click += gcnew System::EventHandler(this, &MainForm::button29_Click);
 			// 
 			// button30
 			// 
@@ -604,6 +772,7 @@ namespace ScientificCalculator {
 			this->button30->TabIndex = 36;
 			this->button30->Text = L"|x|";
 			this->button30->UseVisualStyleBackColor = true;
+			this->button30->Click += gcnew System::EventHandler(this, &MainForm::button30_Click);
 			// 
 			// button31
 			// 
@@ -613,8 +782,9 @@ namespace ScientificCalculator {
 			this->button31->Name = L"button31";
 			this->button31->Size = System::Drawing::Size(75, 23);
 			this->button31->TabIndex = 35;
-			this->button31->Text = L"?";
+			this->button31->Text = L"integ";
 			this->button31->UseVisualStyleBackColor = true;
+			this->button31->Click += gcnew System::EventHandler(this, &MainForm::button31_Click);
 			// 
 			// button32
 			// 
@@ -626,6 +796,7 @@ namespace ScientificCalculator {
 			this->button32->TabIndex = 34;
 			this->button32->Text = L"dy/dx";
 			this->button32->UseVisualStyleBackColor = true;
+			this->button32->Click += gcnew System::EventHandler(this, &MainForm::button32_Click);
 			// 
 			// label2
 			// 
@@ -646,7 +817,7 @@ namespace ScientificCalculator {
 				static_cast<System::Byte>(0)));
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->ItemHeight = 18;
-			this->listBox1->Location = System::Drawing::Point(579, 361);
+			this->listBox1->Location = System::Drawing::Point(579, 393);
 			this->listBox1->Name = L"listBox1";
 			this->listBox1->Size = System::Drawing::Size(104, 220);
 			this->listBox1->TabIndex = 41;
@@ -657,7 +828,7 @@ namespace ScientificCalculator {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(530, 343);
+			this->label3->Location = System::Drawing::Point(535, 374);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(85, 15);
 			this->label3->TabIndex = 42;
@@ -737,7 +908,7 @@ namespace ScientificCalculator {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-			this->ClientSize = System::Drawing::Size(695, 606);
+			this->ClientSize = System::Drawing::Size(695, 625);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button37);
 			this->Controls->Add(this->button33);
@@ -791,6 +962,10 @@ namespace ScientificCalculator {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			this->iBox->ResumeLayout(false);
+			this->iBox->PerformLayout();
+			this->dBox->ResumeLayout(false);
+			this->dBox->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
@@ -799,7 +974,7 @@ namespace ScientificCalculator {
 		}
 #pragma endregion
 	private: System::Void button15_Click(System::Object^  sender, System::EventArgs^  e) {
-		this->textBox1->AppendText("x");
+		this->textBox1->AppendText("X");
 		opSel = true;
 		this->pictureBox3->Load("OpImgs/mulS.png");
 	}
@@ -905,7 +1080,21 @@ private: System::Void button17_Click(System::Object^  sender, System::EventArgs^
 }
 private: System::Void button20_Click(System::Object^  sender, System::EventArgs^  e) {
 	opSel = false;
-	this->textBox1->Text = process(this->textBox1->Text);
+	
+	
+	this->listBox1->Items->Add(this->textBox1->Text);
+	if (this->textBox1->Text->Contains("d(")) {
+		this->textBox1->Text = process(this->textBox1->Text,Convert::ToDouble(this->textBox2->Text), Convert::ToDouble(this->textBox3->Text));
+	}
+	else if (this->textBox1->Text->Contains("Integ(")) {
+		this->textBox1->Text = process(this->textBox1->Text, Convert::ToDouble(this->textBox5->Text), Convert::ToDouble(this->textBox4->Text), Convert::ToDouble(this->textBox6->Text));
+	}
+	else {
+		this->textBox1->Text = process(this->textBox1->Text);
+	}
+	
+	
+	
 	
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -958,9 +1147,11 @@ private: System::Void button12_Click(System::Object^  sender, System::EventArgs^
 	opSel = false;
 	this->op1->Text = "0";
 	this->op2->Text = "0";
+	this->dBox->Visible = false;
+	this->iBox->Visible = false;
 }
 private: System::Void button23_Click(System::Object^  sender, System::EventArgs^  e) {
-	this->textBox1->AppendText("Sqr(");
+	this->textBox1->AppendText("sqr(");
 	this->op1->Text = this->textBox1->Text;
 
 	opSel = false;
@@ -988,6 +1179,48 @@ private: System::Void button25_Click(System::Object^  sender, System::EventArgs^
 	this->textBox1->AppendText("^");
 	opSel = true;
 	this->pictureBox3->Load("OpImgs/mulS.png");
+}
+private: System::Void button21_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->op1->Text = "x=" + this->textBox1->Text;
+	this->textBox1->Text = "inv(";
+	opSel = false;
+	this->op2->Text = "1/x";
+}
+private: System::Void button22_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->Text = this->textBox1->Text +("^2");
+	opSel = false;
+	
+	this->pictureBox3->Load("OpImgs/mulS.png");
+}
+private: System::Void button13_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	this->textBox1->Text = this->textBox1->Text->Remove(this->textBox1->Text->Length-1);
+}
+private: System::Void button30_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->Text = "mod(";
+	opSel = false;
+
+	this->pictureBox3->Load("OpImgs/mulS.png");
+}
+private: System::Void button29_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->textBox1->Text = "exp(";
+	opSel = false;
+
+	this->pictureBox3->Load("OpImgs/mulS.png");
+}
+private: System::Void button32_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->dBox->Visible = true;
+	this->iBox->Visible = false;
+	this->op1->Text = ", Separated Coef";
+	this->op2->Text = "Props";
+	this->textBox1->Text = "d(";
+}
+private: System::Void button31_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->dBox->Visible = false;
+	this->iBox->Visible = true;
+	this->op1->Text = ", Separated Coef";
+	this->op2->Text = "Props";
+	this->textBox1->Text = "Integ(";
 }
 };
 }

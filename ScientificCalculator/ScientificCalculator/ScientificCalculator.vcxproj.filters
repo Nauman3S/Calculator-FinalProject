@@ -28,5 +28,8 @@
     <ClInclude Include="CalcHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Trignometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

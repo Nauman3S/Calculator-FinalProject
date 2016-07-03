@@ -425,7 +425,7 @@ class tanert : public calculator9
 //      ta.calculate();
 //      Sleep(40000);
 //}
-class Basics {
+ref class Basics {
 private:
 	double v1;
 	double v2;
@@ -447,7 +447,7 @@ public:
 	}
 	double squareRoot(double val) {
 		return sqrt(val);
-	
+
 	}
 	double log(double val) {
 	return log10(val);
@@ -460,6 +460,15 @@ public:
 	}
 	double tanAngle(double val) {
 		return tan(val);
+	}
+	double inverse(double val) {
+		return (1 / val);
+	}
+	double mod(double val) {
+		return fabs(val);
+	}
+	double expo(double val) {
+		return exp(val);
 	}
 };
 //

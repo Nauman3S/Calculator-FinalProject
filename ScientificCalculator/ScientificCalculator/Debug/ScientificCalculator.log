@@ -1,9 +1,13 @@
-﻿Build started 7/3/2016 4:15:53 PM.
+﻿Build started 7/4/2016 12:53:47 AM.
      1>Project "E:\ITU\Semester4\OOP\Final-Project\Calculator-FinalProject\ScientificCalculator\ScientificCalculator\ScientificCalculator.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MainForm.cpp
          MainForm.cpp
-     1>e:\itu\semester4\oop\final-project\calculator-finalproject\scientificcalculator\scientificcalculator\calchandler.h(78): warning C4715: 'process': not all control paths return a value
+     1>e:\itu\semester4\oop\final-project\calculator-finalproject\scientificcalculator\scientificcalculator\CalcHandler.h(28): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>e:\itu\semester4\oop\final-project\calculator-finalproject\scientificcalculator\scientificcalculator\CalcHandler.h(48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>e:\itu\semester4\oop\final-project\calculator-finalproject\scientificcalculator\scientificcalculator\calchandler.h(30): warning C4715: 'process': not all control paths return a value
+     1>e:\itu\semester4\oop\final-project\calculator-finalproject\scientificcalculator\scientificcalculator\calchandler.h(51): warning C4715: 'process': not all control paths return a value
+     1>e:\itu\semester4\oop\final-project\calculator-finalproject\scientificcalculator\scientificcalculator\calchandler.h(138): warning C4715: 'process': not all control paths return a value
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\ITU\Semester4\OOP\Final-Project\Calculator-FinalProject\ScientificCalculator\Debug\ScientificCalculator.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\ScientificCalculator.MainForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\ITU\Semester4\OOP\Final-Project\Calculator-FinalProject\ScientificCalculator\Debug\ScientificCalculator.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"Main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MainForm.obj
          "Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.obj"
@@ -12,4 +16,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.72
+Time Elapsed 00:00:02.36
