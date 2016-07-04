@@ -109,6 +109,26 @@ System::String^ processMatrix(System::String^ expression) {
 		//return fullExpSplitted[1];
 
 	}
+	else if (expr->Contains("-")) {
+		//expr = expr->Remove(0, 6);
+
+		//return expr;
+		String^ delimStrB = "-";
+		//Console::WriteLine("delimiter : '{0}'", delimStr);
+		array<Char>^ delimiterB = delimStrB->ToCharArray();
+
+		fullExpSplitted = expr->Split(delimiterB);
+	}
+	else if (expr->Contains("X")) {
+		//expr = expr->Remove(0, 6);
+
+		//return expr;
+		String^ delimStrB = "X";
+		//Console::WriteLine("delimiter : '{0}'", delimStr);
+		array<Char>^ delimiterB = delimStrB->ToCharArray();
+
+		fullExpSplitted = expr->Split(delimiterB);
+	}
 	if (fullExpSplitted[0]->Contains("MatrixAData(")) {
 		fullExpSplitted[0] = fullExpSplitted[0]->Remove(0, 12);
 
@@ -168,9 +188,18 @@ System::String^ processMatrix(System::String^ expression) {
 		}
 	}
 	MatrixCalculator mc;
+	
 	mc.getMatrix(matrix1, matrix2);
-
-	return mc.Add();//Convert::ToString(matrix2[0,1]);
+	if (expr->Contains("+")) {
+		return mc.Add();
+	}
+	else if (expr->Contains("-")) {
+		return mc.Subtract();
+	}
+	else if (expr->Contains("X")) {
+		return mc.Multiply();
+	}
+	//Convert::ToString(matrix2[0,1]);
 	//return (matrix2[1, 1]);
 }
 System::String^ process(System::String^ expression, double uLim, double lLim, double offset) {

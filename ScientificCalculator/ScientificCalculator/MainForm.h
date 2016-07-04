@@ -966,6 +966,7 @@ namespace ScientificCalculator {
 			this->button41->TabIndex = 52;
 			this->button41->Text = L"Subtract";
 			this->button41->UseVisualStyleBackColor = true;
+			this->button41->Click += gcnew System::EventHandler(this, &MainForm::button41_Click);
 			// 
 			// button42
 			// 
@@ -977,6 +978,7 @@ namespace ScientificCalculator {
 			this->button42->TabIndex = 53;
 			this->button42->Text = L"Multiply";
 			this->button42->UseVisualStyleBackColor = true;
+			this->button42->Click += gcnew System::EventHandler(this, &MainForm::button42_Click);
 			// 
 			// button43
 			// 
@@ -1385,6 +1387,16 @@ private: System::Void button40_Click(System::Object^  sender, System::EventArgs^
 	this->op1->Text = "MatrixA Add MatrixB";
 	this->op2->Text = "Matrix A Data";
 	this->textBox1->Text= this->textBox1->Text+("+");
+}
+private: System::Void button41_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->op1->Text = "MatrixA Sub MatrixB";
+	this->op2->Text = "Matrix A Data";
+	this->textBox1->Text = this->textBox1->Text + ("-");
+}
+private: System::Void button42_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->op1->Text = "MatrixA Mul MatrixB";
+	this->op2->Text = "Matrix A Data";
+	this->textBox1->Text = this->textBox1->Text + ("X");
 }
 };
 }
