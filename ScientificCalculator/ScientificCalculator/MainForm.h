@@ -1373,18 +1373,18 @@ private: System::Void button38_Click(System::Object^  sender, System::EventArgs^
 	clearAll();
 	this->op1->Text = "[x,y];[z,r]";
 	this->op2->Text = "Matrix A Data";
-	this->textBox1->AppendText( "MatrixAData(");
+	this->textBox1->Text= this->textBox1->Text+( "MatrixAData(");
 }
 private: System::Void button39_Click(System::Object^  sender, System::EventArgs^  e) {
 	clearAll();
 	this->op1->Text = "[x,y];[z,r]";
 	this->op2->Text = "Matrix B Data";
-	this->textBox1->AppendText ( "MatrixBData(");
+	this->textBox1->Text= this->textBox1->Text+( "MatrixBData(");
 }
 private: System::Void button40_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->op1->Text = "MatrixA Add MatrixB";
 	this->op2->Text = "Matrix A Data";
-	this->textBox1->AppendText("+");
+	this->textBox1->Text= this->textBox1->Text+("+");
 }
 };
 }

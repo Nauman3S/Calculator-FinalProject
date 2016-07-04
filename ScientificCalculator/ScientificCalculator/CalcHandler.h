@@ -3,6 +3,7 @@
 #include "BasicFunctionality.h"
 #include"Trignometry.h"
 #include "StatFunctions.h"
+#include "MatrixArith.h"
 #pragma once
 
 bool opSel = false;
@@ -122,6 +123,8 @@ System::String^ processMatrix(System::String^ expression) {
 		for (int i = 0; i < words->Length; i++) {
 			words[i] = words[i]->Replace("[", "");
 			words[i] = words[i]->Replace("]", "");
+			words[i] = words[i]->Replace("(", "");
+			words[i] = words[i]->Replace(")", "");
 			//words[i] = words[i]->Remove(words[i]->Length-1);
 		}
 		junk = words[0]->Split(delim3->ToCharArray());
@@ -150,6 +153,8 @@ System::String^ processMatrix(System::String^ expression) {
 		for (int i = 0; i < words00->Length; i++) {
 			words00[i] = words00[i]->Replace("[", "");
 			words00[i] = words00[i]->Replace("]", "");
+			words00[i] = words00[i]->Replace("(", "");
+			words00[i] = words00[i]->Replace(")", "");
 			//words[i] = words[i]->Remove(words[i]->Length-1);
 		}
 		junk = words00[0]->Split(delim300->ToCharArray());
@@ -162,7 +167,11 @@ System::String^ processMatrix(System::String^ expression) {
 			}
 		}
 	}
-	return Convert::ToString(matrix2[0,1]);
+	MatrixCalculator mc;
+	mc.getMatrix(matrix1, matrix2);
+
+	return mc.Add();//Convert::ToString(matrix2[0,1]);
+	//return (matrix2[1, 1]);
 }
 System::String^ process(System::String^ expression, double uLim, double lLim, double offset) {
 	////Integration processor
