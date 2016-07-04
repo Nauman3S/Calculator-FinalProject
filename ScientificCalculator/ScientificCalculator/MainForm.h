@@ -97,6 +97,13 @@ namespace ScientificCalculator {
 	private: System::Windows::Forms::TextBox^  textBox4;
 	private: System::Windows::Forms::TextBox^  textBox5;
 	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Button^  button38;
+	private: System::Windows::Forms::Button^  button39;
+	private: System::Windows::Forms::Button^  button40;
+	private: System::Windows::Forms::Button^  button41;
+	private: System::Windows::Forms::Button^  button42;
+	private: System::Windows::Forms::Button^  button43;
+	private: System::Windows::Forms::Button^  button44;
 
 
 
@@ -181,6 +188,13 @@ namespace ScientificCalculator {
 			this->button36 = (gcnew System::Windows::Forms::Button());
 			this->button37 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->button38 = (gcnew System::Windows::Forms::Button());
+			this->button39 = (gcnew System::Windows::Forms::Button());
+			this->button40 = (gcnew System::Windows::Forms::Button());
+			this->button41 = (gcnew System::Windows::Forms::Button());
+			this->button42 = (gcnew System::Windows::Forms::Button());
+			this->button43 = (gcnew System::Windows::Forms::Button());
+			this->button44 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			this->iBox->SuspendLayout();
@@ -906,6 +920,86 @@ namespace ScientificCalculator {
 			this->label4->TabIndex = 48;
 			this->label4->Text = L"Matrix Functions _____";
 			// 
+			// button38
+			// 
+			this->button38->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button38->Location = System::Drawing::Point(128, 490);
+			this->button38->Name = L"button38";
+			this->button38->Size = System::Drawing::Size(75, 23);
+			this->button38->TabIndex = 49;
+			this->button38->Text = L"Matrix A";
+			this->button38->UseVisualStyleBackColor = true;
+			this->button38->Click += gcnew System::EventHandler(this, &MainForm::button38_Click);
+			// 
+			// button39
+			// 
+			this->button39->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button39->Location = System::Drawing::Point(212, 490);
+			this->button39->Name = L"button39";
+			this->button39->Size = System::Drawing::Size(75, 23);
+			this->button39->TabIndex = 50;
+			this->button39->Text = L"Matrix B";
+			this->button39->UseVisualStyleBackColor = true;
+			this->button39->Click += gcnew System::EventHandler(this, &MainForm::button39_Click);
+			// 
+			// button40
+			// 
+			this->button40->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button40->Location = System::Drawing::Point(293, 490);
+			this->button40->Name = L"button40";
+			this->button40->Size = System::Drawing::Size(75, 23);
+			this->button40->TabIndex = 51;
+			this->button40->Text = L"Add";
+			this->button40->UseVisualStyleBackColor = true;
+			this->button40->Click += gcnew System::EventHandler(this, &MainForm::button40_Click);
+			// 
+			// button41
+			// 
+			this->button41->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button41->Location = System::Drawing::Point(374, 490);
+			this->button41->Name = L"button41";
+			this->button41->Size = System::Drawing::Size(75, 23);
+			this->button41->TabIndex = 52;
+			this->button41->Text = L"Subtract";
+			this->button41->UseVisualStyleBackColor = true;
+			// 
+			// button42
+			// 
+			this->button42->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button42->Location = System::Drawing::Point(128, 519);
+			this->button42->Name = L"button42";
+			this->button42->Size = System::Drawing::Size(75, 23);
+			this->button42->TabIndex = 53;
+			this->button42->Text = L"Multiply";
+			this->button42->UseVisualStyleBackColor = true;
+			// 
+			// button43
+			// 
+			this->button43->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button43->Location = System::Drawing::Point(212, 519);
+			this->button43->Name = L"button43";
+			this->button43->Size = System::Drawing::Size(75, 23);
+			this->button43->TabIndex = 54;
+			this->button43->Text = L"+Scalar";
+			this->button43->UseVisualStyleBackColor = true;
+			// 
+			// button44
+			// 
+			this->button44->Font = (gcnew System::Drawing::Font(L"Lucida Bright", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button44->Location = System::Drawing::Point(293, 519);
+			this->button44->Name = L"button44";
+			this->button44->Size = System::Drawing::Size(75, 23);
+			this->button44->TabIndex = 55;
+			this->button44->Text = L"xScalar";
+			this->button44->UseVisualStyleBackColor = true;
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -913,6 +1007,13 @@ namespace ScientificCalculator {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(695, 625);
+			this->Controls->Add(this->button44);
+			this->Controls->Add(this->button43);
+			this->Controls->Add(this->button42);
+			this->Controls->Add(this->button41);
+			this->Controls->Add(this->button40);
+			this->Controls->Add(this->button39);
+			this->Controls->Add(this->button38);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button37);
 			this->Controls->Add(this->button33);
@@ -1086,6 +1187,9 @@ private: System::Void button17_Click(System::Object^  sender, System::EventArgs^
 	opSel = true;
 	this->pictureBox3->Load("OpImgs/addS.png");
 }
+array <String^>^ m1;
+array <String^>^ m2;
+
 private: System::Void button20_Click(System::Object^  sender, System::EventArgs^  e) {
 	opSel = false;
 	
@@ -1100,6 +1204,10 @@ private: System::Void button20_Click(System::Object^  sender, System::EventArgs^
 	}
 	else if (ttext->Contains("Mean(")|| ttext->Contains("Mode(")|| ttext->Contains("Median(")|| ttext->Contains("Variance(")||ttext->Contains("StdDev(")) {
 		this->textBox1->Text = processStat(this->textBox1->Text);
+	}
+	else if (ttext->Contains("Matrix")) {
+		///matrix Processor
+		this->textBox1->Text = processMatrix(ttext);
 	}
 
 	else {
@@ -1260,6 +1368,23 @@ private: System::Void button37_Click(System::Object^  sender, System::EventArgs^
 	this->op1->Text = ", Separated";
 	this->op2->Text = "StdDev";
 	this->textBox1->Text = "StdDev(";
+}
+private: System::Void button38_Click(System::Object^  sender, System::EventArgs^  e) {
+	clearAll();
+	this->op1->Text = "[x,y];[z,r]";
+	this->op2->Text = "Matrix A Data";
+	this->textBox1->AppendText( "MatrixAData(");
+}
+private: System::Void button39_Click(System::Object^  sender, System::EventArgs^  e) {
+	clearAll();
+	this->op1->Text = "[x,y];[z,r]";
+	this->op2->Text = "Matrix B Data";
+	this->textBox1->AppendText ( "MatrixBData(");
+}
+private: System::Void button40_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->op1->Text = "MatrixA Add MatrixB";
+	this->op2->Text = "Matrix A Data";
+	this->textBox1->AppendText("+");
 }
 };
 }

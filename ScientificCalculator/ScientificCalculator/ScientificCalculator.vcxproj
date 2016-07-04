@@ -144,6 +144,7 @@
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MatrixArith.h" />
     <ClInclude Include="StatFunctions.h" />
     <ClInclude Include="Trignometry.h" />
   </ItemGroup>
